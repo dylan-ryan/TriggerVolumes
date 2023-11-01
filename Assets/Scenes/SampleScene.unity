@@ -885,6 +885,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eceea019626d6cb4ab2489ed81480543, type: 3}
+--- !u!1 &494422020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ee4681941fcf26e4e9e2f2ca3f227227,
+    type: 3}
+  m_PrefabInstance: {fileID: 1871451773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &494422022
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494422020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e939044bfcf48f745a9af742d124b027, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &599570488
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +924,7 @@ GameObject:
   - component: {fileID: 599570491}
   - component: {fileID: 599570490}
   - component: {fileID: 599570489}
+  - component: {fileID: 599570493}
   m_Layer: 0
   m_Name: CauldronButton
   m_TagString: Untagged
@@ -990,6 +1018,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599570493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599570488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae71764d76924841839b7427eca4f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1911229382}
 --- !u!1 &699658696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1043,7 @@ GameObject:
   - component: {fileID: 699658699}
   - component: {fileID: 699658698}
   - component: {fileID: 699658697}
+  - component: {fileID: 699658701}
   m_Layer: 0
   m_Name: GhostButton
   m_TagString: Untagged
@@ -1095,6 +1137,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699658701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699658696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fe1313b0a4abd4585153b8c7614e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 494422022}
+  animationTrigger: Activate
 --- !u!4 &734121940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eceea019626d6cb4ab2489ed81480543,
@@ -1208,6 +1264,12 @@ Transform:
   - {fileID: 11536389}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &816045504 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 4590f58ac2a32ec429ed9c052e48d815,
+    type: 3}
+  m_PrefabInstance: {fileID: 443517569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1647,8 @@ GameObject:
   - component: {fileID: 1343376991}
   - component: {fileID: 1343376990}
   - component: {fileID: 1343376989}
+  - component: {fileID: 1343376994}
+  - component: {fileID: 1343376993}
   m_Layer: 0
   m_Name: PumpkinButton
   m_TagString: Untagged
@@ -1678,6 +1742,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1343376993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343376988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8c4ab0cfbf8cb46b59f2b0ac3c4d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: 816045504}
+  onColor: {r: 1, g: 1, b: 1, a: 1}
+  offColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &1343376994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343376988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fe1313b0a4abd4585153b8c7614e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animationTrigger: Activate
 --- !u!1001 &1439623635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2338,8 +2431,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ee4681941fcf26e4e9e2f2ca3f227227,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 494422022}
   m_SourcePrefab: {fileID: 100100000, guid: ee4681941fcf26e4e9e2f2ca3f227227, type: 3}
+--- !u!1 &1911229382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5edd9788cc160aa499ecd2b386f38f00,
+    type: 3}
+  m_PrefabInstance: {fileID: 1615217085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2014102809
 PrefabInstance:
   m_ObjectHideFlags: 0
